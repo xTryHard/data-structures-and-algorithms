@@ -1,0 +1,13 @@
+Solution:
+
+After reading the problem, I had an idea: "save the positions of the elements within the array". 
+I knew that if I tried to implement the linear searches, the program would exceed time limit so keeping the positions seemed useful. 
+
+With that in mind, I took a notebook and started to analyze the test cases. 
+
+After doing the maths, I came out with a solution: 
+
+- For forward linear seach, you need B + 1 comparissons, where 'B' is the position of the queried value. For example, to find '1' in [9, 4, 2, 1, 3] with forward linear search, B + 1 = 3 (zero based indexing) + 1 = 4 comparissons are needed (compare 9, 4, 2 and 1 itself).
+
+- In these terms, for reverse linear search, I identified that it was the relation of the positions of the elements with the size of the array: you need N - B comparissons to find an element, where 'N' is the total number of elements and 'B' is the position of the queried value. Using the same example ([9, 4, 2, 1, 3]) , to find '1' N - B = 5 - 3 (zero based indexing) = 3 comparissons are needed. That is 3 and 1 itself.
+
